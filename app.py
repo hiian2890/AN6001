@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 
 app= Flask(__name__)
 
@@ -10,9 +10,9 @@ def index():
 @app.route("/main", methods=["GET","POST"])
 def main():
 def main():
-    q=request.get("q")
+    q=request.values.get("q")
     print(q)
-    return(render_template("main.html"))
+    return render_template("main.html")
     
 if __name__== "__main__":
     app.run()
