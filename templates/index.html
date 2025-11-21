@@ -1,0 +1,15 @@
+<head>
+    <meta name="viewpoint" content="width=device-wideth, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class='container'>
+    <h2>Welcome to AN6100 AI WebAPP</h2>
+    <form action="/main" method="post">
+        <p> Please enter your name: </p>
+        <input type="text" name="q">
+        <input type="submit" value="Enter">
+    </form>
+</div>
+</body>
