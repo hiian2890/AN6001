@@ -6,6 +6,9 @@ app= Flask(__name__)
 
 def index():
     return(render_template ("index.html"))
+    
+@app.route("/main", methods=["GET","POST"])
+def main():
 def main():
     q=request.get("q")
     print(q)
